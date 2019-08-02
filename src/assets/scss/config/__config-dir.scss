@@ -1,0 +1,27 @@
+/*********************
+IMPORTING config
+Establish mixins, functions, and variables that we'll be using across the project.
+*********************/
+
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "normalize";
+
+// Sass variables
+@import "variables";
+
+// Sass functions
+@import "functions";
+
+// Sass mixins
+@import "mixins";
+
+// Breakpoint helper
+// @import "config/new-breakpoint";
+
+// @import "breakpoints";
+
+// @import "baseline-helper";
+
+// Dev tools
+// @import "dev-tools";

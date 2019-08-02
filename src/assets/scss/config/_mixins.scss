@@ -1,0 +1,72 @@
+
+@mixin clearfix {
+  
+  opacity: 0.5;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin boxshadow($offsetblur: 10px, $color: black) {
+  box-shadow: $offsetblur $offsetblur $offsetblur 0 $color;
+}
+
+
+
+@mixin valign($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; 
+  height: auto; 
+}
+
+@mixin text-replacement() {
+    border: 0; 
+    font: 0/0 a; 
+    text-shadow: none; 
+    color: transparent; 
+    text-indent: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+} 
+
+
+
+//-----------------media------------------------
+
+// width
+@mixin r($width) {
+    @media only screen and (max-width: $width+ "px") {
+        @content
+    }
+}
+
+@mixin rm($width) {
+    @media only screen and (min-width: $width+ "px") {
+        @content
+    }
+}
+
+@mixin rmm($width1,$width2) {
+    @media only screen and (min-width: $width1+ "px") and (max-width:$width2+"px") {
+        @content
+    }
+}
+
+// height
+@mixin rh($height) {
+    @media only screen and (max-height: $height + "px") {
+        @content
+    }
+}
+

@@ -1,0 +1,16 @@
+
+<article id="tease-{{post.ID}}" role="article" class="tease tease--type-{{post.post_type}}">  <!-- post_class() -->
+	{% block content %}
+		<header class="tease__header">
+			<h2 itemprop="headline" class="tease__title"><a href="{{post.link}}">{{post.title}}</a></h2>
+		</header> 
+		<section itemprop="articleBody" class="tease__content">
+			<p>{{post.preview}}</p>
+			{% if post.get_thumbnail %}
+				<img src="{{post.thumbnail.src}}">
+			{% endif %}
+		</section>
+		<footer class="tease__footer">
+		</footer>
+	{% endblock %}
+</article>	

@@ -1,0 +1,101 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+******************************************************************/
+
+/* COLUMN SPACING */
+
+$grid-columns: 		23; // total columns (no gutter)
+$col: 				100%/$grid-columns; // single column width (percentage)
+$column: 			$col;
+
+/* BASELINE AND TYPOGRAPHY */
+
+$baseline			: .8rem;
+$lh 				: $baseline*5;
+$section-spacing	: $lh*6;
+
+
+/* VERTICAL RHYTHM SPACING */
+
+$base: 15px;
+
+
+/* TEXT */
+
+$text-small:16px; 
+$text-bold: 600;
+$text-smaller: 14px;
+
+/*********************
+FONT STACKS
+*********************/
+
+// Let's use OS system fonts and let the system do the work. We've included all the major desktop and mobile OS's.
+// See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/. 
+
+$sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$serif: "Georgia", Cambria, Times New Roman, Times, serif;
+
+/* Commented out since WP uses system fonts now but if you can't let go I won't be upset. */
+
+// $open: 'Open Sans', $sans-serif;
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+
+$black: #323944;
+$white: #fff;
+
+$off-white: darken($white, 2%);
+
+
+$light-gray: #f8f9fa;
+$gray: #eaedf2;
+
+// $text-color:        #5c6b80;
+
+$meta-gray: #9fa6b4;
+
+$tan: #eceee5;
+
+$green: #7dd667;
+
+$bones-pink: #f01d4f;
+$blue: #2980b9;
+
+$sb-blue: #0056ac;
+$sb-light-blue: #99bbde;
+$sb-dark-blue: #004466;
+$sb-midnight: #001c3a;
+$sb-purple: #CC0099;
+$sb-orange: #F05A28;
+$sb-dark-orange: #B4441E;
+$sb-red: #f23e2f;
+$sb-black: #111111;
+$sb-grey: #808080;
+
+$text-color: lighten($sb-black, 18%);
+
+$link-color: $sb-blue;
+$link-hover: darken($link-color, 9%);
+
+$border-color: #ccc;
+$disabled-gray: #cfcfcf;
+
+/*
+Here's a great tutorial on how to use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/

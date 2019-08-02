@@ -1,0 +1,34 @@
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.pagination,
+.wp-prev-next {}
+
+.pagination {
+    ul {}
+
+    li {}
+
+    a, span {
+        &:hover, &:focus {}
+    }
+
+    .current {
+        &:hover, &:focus {}
+    }
+} /* end plate_page_navi */
+
+/* fallback previous & next links */
+.wp-prev-next {
+    ul {}
+
+    .prev-link {
+        float: left;
+    }
+
+    .next-link {
+        float: right;
+    }
+} /* end .wp-prev-next */

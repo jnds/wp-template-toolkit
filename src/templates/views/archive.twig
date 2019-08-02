@@ -1,0 +1,39 @@
+{% extends 'base.twig' %}
+
+{# START Body #}
+{% block body %}
+
+    {# START App #}
+    {% embed 'components/app.twig' %} 
+
+        {# START Header #}
+        {% block header %}
+            {% include 'components/header.twig' %}
+        {% endblock %}
+        {# END Header #}
+
+        {# START Content #}        
+		{% block content %}
+			
+			<h1>{{ title }}</h1>
+			
+			{% for post in posts %}
+				{% include ['components/tease-'~post.post_type~'.twig', 'components/tease.twig'] %}
+			{% endfor %}
+			
+			{% include 'components/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+
+		{% endblock %}
+        {# END Content #}
+
+        {# START Footer #}
+        {% block footer %}
+            {% include 'components/footer.twig' %}
+        {% endblock %}
+        {# END Footer #}
+    
+    {% endembed %}
+    {# END App #}
+
+{% endblock %}
+{# END Body #}

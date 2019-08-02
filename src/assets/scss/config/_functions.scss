@@ -1,0 +1,220 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+Some cool simple examples here:
+https://vanseodesign.com/css/custom-sass-functions/
+
+******************************************************************/
+
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+
+// black
+@function black($opacity) {
+    @return rgba(0, 0, 0, $opacity);
+}
+
+// white
+@function white($opacity) {
+    @return rgba(255, 255, 255, $opacity);
+}
+
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+
+@function calc-percent($target, $container) {
+    @return $target / $container * 100%;
+}
+
+@function cp($target, $container) {
+    @return calc-percent($target, $container);
+}
+
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+Some cool simple examples here:
+https://vanseodesign.com/css/custom-sass-functions/
+
+******************************************************************/
+
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+
+// black
+@function black($opacity) {
+    @return rgba(0, 0, 0, $opacity);
+}
+
+// white
+@function white($opacity) {
+    @return rgba(255, 255, 255, $opacity);
+}
+
+// Shades/tints functions. Sweet.
+@function darkest( $color ) 	{ @return darken($color,20%); }
+@function darker( $color ) 		{ @return darken($color,13.333%); }
+@function dark( $color ) 		{ @return darken($color,6.667%); }
+@function light( $color ) 		{ @return lighten($color,16.667%); }
+@function lighter( $color ) 	{ @return lighten($color,33.333%); }
+@function lightest( $color ) 	{ @return lighten($color,50%); }
+
+
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+
+@function calc-percent($target, $container) {
+    @return $target / $container * 100%;
+}
+
+@function cp($target, $container) {
+    @return calc-percent($target, $container);
+}
+
+
+/************************
+MORE SASS FUNCTIONS
+*************************/
+
+
+// include background images easily
+@function path($src, $dir: img) {
+	$src: unquote($src);
+	@return url(unquote("..")/$dir/$src);
+}
+
+// strip the unit from a value
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+/* Example:
+$length: 42em;
+$int: strip-unit($length); // 42
+*/
+
+/**
+ * Calculate rems based on a base unit.
+ */
+ @function remCalc($size, $base) {
+    $remSize: $size / $font-base-size;
+    @return #{$remSize}rem;
+}
+
+
+// mapping function (key=>value pairs)
+@function match($haystack, $needle) {
+    @each $item in $haystack {
+        $index: index($item, $needle);
+        @if $index {
+            $return: if($index == 1, 2, $index);
+            @return nth($item, $return);
+        }
+    }
+    @return false;
+}
+
+/* Example:
+$list: a b, c d, e f;
+$value: match($list, e); // returns f
+$value: match($list, b); // returns a
+$value: match($list, z); // returns false
+*/
+
+
+// create arrows (triangles)
+// from here: http://selfteach.me/sass-extends-mixins-functions/
+@mixin arrow ($direction, $size, $color) {
+	@if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+	} @else if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+	} @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+	} @else if $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right:$size solid $color;
+	}
+}

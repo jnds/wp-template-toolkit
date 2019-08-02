@@ -1,0 +1,19 @@
+.cf{
+    @include clearfix;
+}
+
+.eq{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hidden{
+    display: none;
+}
+
+img {
+    display: block; // removes added default margin
+    // responsive images by default
+    max-width: 100%;
+    height: auto;
+}

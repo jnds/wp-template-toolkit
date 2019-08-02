@@ -1,0 +1,79 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Gutenberg Stylesheet
+
+Place all of your styles in the .edit-post-visual-editor block 
+below so they *only* apply to the Gutenberg editor.
+
+******************************************************************/
+
+.edit-post-visual-editor {}
+
+
+/**
+* Assigning colors to blocks.
+* Change/add more classes for your block colors:
+•
+* .has-your-theme-color-background-color {}
+* .has-your-theme-color-color {}
+*
+* See here: https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+*/
+.has-studio-bio-blue-background-color {
+    background-color: #0056ac;
+}
+
+.has-studio-bio-blue-color {
+    color: #0056ac;
+}
+
+
+
+/* Style the Gutenberg page */
+body.gutenberg-editor-page {}
+
+/* Main editor column width */
+body.gutenberg-editor-page .editor-post-title__block,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {}
+
+/* Width of "wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {}
+
+/* Width of "full-wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+    max-width: none;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+	// Gutenberg styles
+	.edit-post-visual-editor {
+	    .alignfull {
+	        margin-right: calc(50% - 50vw);
+	        margin-left: calc(50% - 50vw);
+	        max-width: 1000%;
+	        width: auto;
+	    }
+
+	    .alignwide {
+	        margin-right: calc(25% - 25vw);
+	        margin-left: calc(25% - 25vw);
+	        max-width: 1000%;
+	        width: auto;
+	    }
+
+	    .alignwide img,
+	    .alignfull img {
+	        display: block;
+	        margin: 0 auto;
+	    }
+	}
+
+}

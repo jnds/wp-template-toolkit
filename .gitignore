@@ -1,0 +1,9 @@
+# folders and files to be ignored by git
+
+############
+## Node Modules
+############
+
+node_modules
+
+src/assets/bower_components

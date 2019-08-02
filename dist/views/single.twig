@@ -1,0 +1,48 @@
+{% extends 'base.twig' %}
+
+{# START Body #}
+{% block body %}
+
+    {# START App #}
+    {% embed 'components/app.twig' %} 
+
+        {# START Header #}
+        {% block header %}
+            {% include 'components/header.twig' %}
+        {% endblock %}
+        {# END Header #}
+
+        {# START Content #}
+        {% block content %}
+
+    		<article id="post-{{post.ID}}" role="article" itemscope="" itemtype="https://schema.org/BlogPosting" class="article article--type-{{post.post_type}}"> 
+    			<header class="article__header">
+    				<h1 itemprop="headline" class="article__title">{{post.title}}</h1>
+                    <p class="article__author">
+                        <span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+                    </p>
+    			</header> 
+                <figure itemprop="articleImage" class="article__image">
+                    <img src="{{ post.thumbnail.src|resize(1200, 300) }}">  
+                </figure>
+    			<section itemprop="articleBody" class="article__content">
+    				{{post.content}}
+    			</section>
+    			<footer class="article__footer">
+    			</footer>
+    		</article>	
+
+        {% endblock %}
+        {# END Content #}
+
+        {# START Footer #}
+        {% block footer %}
+            {% include 'components/footer.twig' %}
+        {% endblock %}
+        {# END Footer #}
+    
+    {% endembed %}
+    {# END App #}
+
+{% endblock %}
+{# END Body #}

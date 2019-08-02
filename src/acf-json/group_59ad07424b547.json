@@ -1,0 +1,43 @@
+{
+    "key": "group_59ad07424b547",
+    "title": "Resources",
+    "fields": [
+        {
+            "key": "field_5d398e8dbe539",
+            "label": "Url",
+            "name": "url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "tech_resource"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1564071934
+}

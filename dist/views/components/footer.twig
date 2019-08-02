@@ -1,0 +1,13 @@
+<footer id="footer" role="contentinfo" itemscope="" itemtype="https://schema.org/WPFooter" class="site-footer container-fluid">
+	<div id="inner-footer" class="site-footer__inner row">
+		<nav role="navigation" class="site-footer__nav col-xs-23 col-md-11">
+			<h1 class="hidden" role="banner">Footer menu</h1>
+			<ul class="site-footer__menu">
+				{% for item in footer_menu.get_items %}
+					<li class="site-footer__menuItem {{ item.class }}"><a href="{{ item.get_link }}" class="site-footer__menuLink">{{ item.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+		<p class="site-footer__copyright col-xs-23 col-md-11 col-md-push-1">Copyright {{"now"|date('Y')}}</p>
+	</div>
+</footer>

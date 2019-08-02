@@ -1,0 +1,13 @@
+<header id="header" block="site-header" mix="block:container-fluid" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+	<div elem="inner" mix="block:row">
+		<a elem="logo" mix="block:col-xs-23, block:col-md-11" href="{{ site.url }}" rel="home">{{ site.name }}</a>
+		<nav elem="nav" mix="block:col-xs-23, block:col-md-11, block:col-md-push-1" role="navigation">
+			<h1 class="hidden" role="banner">Main menu</h1>
+			<ul elem="menu">
+				{% for item in menu.get_items %}
+					<li elem="menuItem" class="{{ item.class }}"><a elem="menuLink" href="{{ item.get_link }}">{{ item.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</header>

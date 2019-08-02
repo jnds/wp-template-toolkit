@@ -1,0 +1,22 @@
+<body class="{{body_class}}" data-template="base.twig">    
+
+{% block header %}
+{% endblock %}
+
+	<div id="content" class="content-area container-fluid">
+	    <div id="inner-content" class="content-area__inner row">
+	        <main id="main" role="main" itemscope="" itemprop="mainContentOfPage" itemtype="https://schema.org/Blog" class="content-area__main col-xs-23">
+
+			    {% block content %}
+			    {% endblock %}
+
+			</main>	
+		</div>
+	</div>
+
+{% block footer %}
+{% endblock %}
+
+{{ function('wp_footer') }}
+
+</body>

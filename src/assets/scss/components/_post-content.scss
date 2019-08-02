@@ -1,0 +1,171 @@
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {}
+
+.hentry {
+    header {}
+    footer {}
+}
+
+.single-title,
+.page-title,
+.entry-title {}
+
+.single-title {}
+
+.page-title {}
+
+.entry-title {}
+
+.archive-title {}
+
+.post-id {}
+
+.post {}
+
+.page {}
+
+.attachment {}
+
+.sticky {}
+
+.hentry {}
+
+.category-slug {}
+
+.tag-slug {}
+
+/* post meta */
+.byline-wrap {
+    margin-bottom: 1.5em;
+    .byline {
+        time {}
+    }
+}
+
+
+/* entry content */
+.entry-content {
+    p {}
+
+    ul, ol, table, dl {}
+
+    ul, ol {
+        li {}
+    }
+
+    ul {
+        li {}
+    }
+
+    ol {
+        li {}
+    }
+
+    table {
+        margin-bottom: 1.5em;
+        width: 100%;
+        border: 1px solid #ccc;
+
+        caption {}
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+
+        &:nth-child(even) {
+            background-color: #dedede;
+        }
+    }
+
+    td {
+        padding: 7px;
+        border-right: 1px solid #ccc;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    th {
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background-color: #dedede;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    blockquote p {
+        &:before {}
+    }
+
+    dl {}
+
+    dt {}
+
+    dd {}
+
+    img {}
+
+    /*
+    image alignment on a screen this size may be
+    a bit difficult. It's set to start aligning
+    and floating images at the next breakpoint,
+    but it's up to you. Feel free to change it up.
+    */
+    .alignleft, img.alignleft {}
+
+    .alignright, img.alignright {}
+
+    .aligncenter, img.aligncenter {}
+
+    .size-auto,
+    .size-full,
+    .size-large,
+    .size-medium,
+    .size-thumbnail {}
+
+    pre {}
+
+    code {}
+    
+} /* end .entry-content */
+
+.wp-caption {
+    /* images inside wp-caption */
+    img {}
+
+    p.wp-caption-text {}
+} /* end .wp-caption */
+
+/* image gallery styles */
+.gallery {
+    dl {
+        a {}
+
+        img {}
+    }
+
+    dt {}
+
+    dd {}
+} /* end .gallery */
+
+/* gallery caption styles */
+.gallery-caption {}
+
+/* default WP image classes */
+.size-full {}
+
+.size-large {}
+
+.size-medium {}
+
+.size-thumbnail {}
+
+// the tag output
+.tags {}

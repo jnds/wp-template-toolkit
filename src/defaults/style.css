@@ -1,0 +1,25 @@
+/*--------------------------------------------
+Theme Name: wp-template-toolkit
+Text Domain: platetheme
+Description: Manage your theme wit PHP and Twig (HTML) files.
+Tags: accessibility-ready, translation-ready, microformats, rtl-language-support, custom-menu, editor-style
+
+
+(You should update the above info with your own for your projects)
+----------------------------------------------
+
+/* WordPress Theme Check needs these classes in the CSS even (http://wordpress.org/plugins/theme-check/) */
+
+.sticky {}
+
+/* DO NOT EDIT THIS */
+.gallery-caption {}
+
+/* THESE ARE USELESS */
+.bypostauthor {}
+
+.wp-caption {}
+
+.wp-caption-text {}
+
+/* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

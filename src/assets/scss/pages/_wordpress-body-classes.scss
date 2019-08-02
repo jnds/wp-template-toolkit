@@ -1,0 +1,118 @@
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+/*
+As you add pages, add your own body classes below if you 
+need page-specific styles.
+
+It's good practice to use .page-yourpage {} syntax here so 
+that you don't conflict with other classes. That's what
+the cool kids do.
+
+*/
+
+.rtl {}
+
+.home {}
+
+.blog {}
+
+.archive {}
+
+.date {}
+
+.date-paged-1 {}
+
+.search {}
+
+.search-results {}
+
+.search-no-results {}
+
+.search-paged-1 {}
+
+.error404 {
+    .search-outer {
+        padding: 1.5em 0;
+    }
+    .search-input {
+        display: flex;
+        width: 100%;
+    }
+    input[type="search"] {
+        margin: 0 1em 0 0;
+        height: 40px;
+        min-width: 250px;
+    }
+    .search-submit {
+        width: 100px;
+    }
+}
+
+.single {}
+
+.single-full {}
+
+.postid-1 {}
+
+.single-paged-1 {}
+
+.attachment {}
+
+.attachmentid-1 {}
+
+.attachment-mime-type {}
+
+.author {}
+
+.author-nicename {}
+
+.author-paged-1 {}
+
+.category {}
+
+.category-1 {}
+
+.category-paged-1 {}
+
+.tag {}
+
+.tag-slug {}
+
+.tag-paged-1 {}
+
+.page-blog {
+    .entry-content {
+        // keep new Gutenberg image styles in check for blog page
+        .alignfull, .alignwide {
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+}
+
+.page-template {}
+
+.page-template-page-php {}
+
+.page-paged-1 {}
+
+.page-parent {}
+
+.page-child {}
+
+.parent-pageid-1 {}
+
+.logged-in {}
+
+.paged {}
+
+.paged-1 {}
+
+/**
+ * put all your custom page classes here  
+ * e.g. .page-yourpage {}
+ */

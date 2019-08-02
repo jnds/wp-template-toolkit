@@ -1,0 +1,43 @@
+{% extends 'base.twig' %}
+
+{# START Body #}
+{% block body %}
+
+    {# START App #}
+    {% embed 'components/app.twig' %} 
+
+        {# START Header #}
+        {% block header %}
+            {% include 'components/header.twig' %}
+        {% endblock %}
+        {# END Header #}
+
+        {# START Content #}
+        {% block content %}
+             
+			<article id="post-not-found" block="article">
+				<header elem="header">
+					<h1 elem="title" itemprop="headline">404</h1>
+				</header> 
+				<section elem="content" itemprop="articleBody">
+					<h3>We couldn't find what you are looking for.</h3>
+					<p>please try searching.</p>
+				</section>
+				<footer class="article-footer">
+				</footer>
+			</article>
+		
+        {% endblock %}
+        {# END Content #}
+
+        {# START Footer #}
+        {% block footer %}
+            {% include 'components/footer.twig' %}
+        {% endblock %}
+        {# END Footer #}
+    
+    {% endembed %}
+    {# END App #}
+
+{% endblock %}
+{# END Body #}
