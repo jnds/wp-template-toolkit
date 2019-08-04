@@ -1,6 +1,7 @@
 
 # Wordpress Template Toolkit
 
+
 ## Key Features
 
 * Build script to preprocess and optimize assets
@@ -18,6 +19,7 @@
   - screen reader text 
   - a11y.js
 
+
 ## Installation
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
@@ -32,6 +34,7 @@ $ cd wp-template-toolkit
 # Install dependencies
 $ npm install
 ```
+
 
 ## Usage
 
@@ -49,15 +52,6 @@ $ gulp build
 The gulp tasks for compiling and optimizing assets all live in separate files. This adds a little redundancy to the code but it’s a nice way to keep things modular and tidy. 
 
 
-## Why use a 23 column bootstrap grid 
-
-I find this very useful for prototyping and even building entire sites. I was inspired by Jasper McChesney's [article](http://breakforsense.net/flexible-layout-23-column-grid/) where he says the following:
-
-"You can readily divide 23 into groups to make text columns, with some of the original columns acting as gutters (always 1 per gutter). Because I’ve chosen the number 23 very carefully, the math works out for divisions of 2 and 3, as well as several sub-divisions. So we can make text columns of 2, 4, 8, and also 3, 6, and 12."
-
-Bootstrap's grid provides a quick way to set this up. I've limited the use of Bootrap to just the grid (not the rest of the framework) but of there are still some drawbacks to this approach - mainly that it creates a lot of unnecessary CSS. It's used here as a starting point and it can be easily replaced with any other grid system. If you do choose to use it in production I recommend reading this article about [using mixins to manage both grid and styling behaviour in your SCSS rather than adding grid classes to your HTML](https://medium.com/@erik_flowers/how-youve-been-getting-the-bootstrap-grid-all-wrong-and-how-to-fix-it-6d97b920aa40)
-
-
 ## Built using 
 - Wordpress CMS with Adanced Custom Fields plugin
 - Twig templating engine along with the Timber plugin for flexible, fast, and sustainable template development
@@ -66,6 +60,15 @@ Bootstrap's grid provides a quick way to set this up. I've limited the use of Bo
 - jQuery for simplified HTML document traversing, event handling, animating, and Ajax interactions
 - SCSS for writing more succinct CSS, and to keep files organized
 - Bootstrap - just the grid
+
+
+## Why use a 23 column bootstrap grid?
+
+I find this very useful for prototyping and even building entire sites. I was inspired by Jasper McChesney's [article](http://breakforsense.net/flexible-layout-23-column-grid/) where he says the following:
+
+"You can readily divide 23 into groups to make text columns, with some of the original columns acting as gutters (always 1 per gutter). Because I’ve chosen the number 23 very carefully, the math works out for divisions of 2 and 3, as well as several sub-divisions. So we can make text columns of 2, 4, 8, and also 3, 6, and 12."
+
+Bootstrap's grid provides a quick way to set this up. I've limited the use of Bootrap to just the grid (not the rest of the framework) but of there are still some drawbacks to this approach - mainly that it creates a lot of unnecessary CSS. It's used here as a starting point and it can be easily replaced with any other grid system. If you do choose to use it in production I recommend reading this article about [using mixins to manage both grid and styling behaviour in your SCSS rather than adding grid classes to your HTML](https://medium.com/@erik_flowers/how-youve-been-getting-the-bootstrap-grid-all-wrong-and-how-to-fix-it-6d97b920aa40)
 
 
 ## To-do
