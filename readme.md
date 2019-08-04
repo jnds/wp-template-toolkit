@@ -3,14 +3,20 @@
 
 ## Key Features
 
-* Modular Sass/SCSS & js files compiled and imported as single files
-* Object oriented templates using the Twig templating engine along with the Timber plugin 
-* BEM front-end naming methodology using PostHTML plugin to simplify maintenance
 * Build script to preprocess and optimize assets
+* Modular SCSS & javacript files compiled and imported as single files
 * Live browser testing (using Livereload)
+* MVC-like separation of concerns for templates using the Twig templating engine along with the Timber plugin 
+* PostHTML plugin to simplify the maintenance of BEM naming structure in html
 * ACF-JSON to save ACF field data under version control
-* CPT sample adapted from Plate theme by studio.bio
-* HTML schema, accessibility-ready patterns from the WP theme guide, ARIA values, screen reader text and a11y.js for expanded accessibility support. Adapted from Plate theme by studio.bio
+* Automated image optimisation
+* Helper functions to cleanup the wordpress head and dashboard adapted from [Plate](https://studio.bio/themes/plate) and elsewhere
+* Custom post type and taxonomy samples adapted from [Plate](https://studio.bio/themes/plate)
+* HTML schema & accessibility support adapted from [Plate](https://studio.bio/themes/plate)
+  - accessibility-ready patterns from the WP theme guide 
+  - ARIA values, 
+  - screen reader text 
+  - a11y.js
 
 ## Installation
 
@@ -40,11 +46,27 @@ $ gulp watch
 $ gulp build
 
 ```
+The gulp tasks for compiling and optimizing assets all live in separate files. This adds a little redundancy to the code but it’s a nice way to keep things modular and tidy. 
 
-## Built with 
 
-- [jQuery - Ajax](http://www.w3schools.com/jquery/jquery_ref_ajax.asp) - jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
-- [Bootstrap](http://getbootstrap.com/) - Extensive list of components and  Bundled Javascript plugins.
+## Why use a 23 column bootstrap grid 
+
+I find this very useful for prototyping and even building entire sites. I was inspired by Jasper McChesney's [article](http://breakforsense.net/flexible-layout-23-column-grid/) where he says the following:
+
+"You can readily divide 23 into groups to make text columns, with some of the original columns acting as gutters (always 1 per gutter). Because I’ve chosen the number 23 very carefully, the math works out for divisions of 2 and 3, as well as several sub-divisions. So we can make text columns of 2, 4, 8, and also 3, 6, and 12."
+
+Bootstrap's grid provides a quick way to set this up. I've limited the use of Bootrap to just the grid (not the rest of the framework) but of there are still some drawbacks to this approach - mainly that it creates a lot of unnecessary CSS. It's used here as a starting point and it can be easily replaced with any other grid system. If you do choose to use it in production I recommend reading this article about [using mixins to manage both grid and styling behaviour in your SCSS rather than adding grid classes to your HTML](https://medium.com/@erik_flowers/how-youve-been-getting-the-bootstrap-grid-all-wrong-and-how-to-fix-it-6d97b920aa40)
+
+
+## Built using 
+- Wordpress CMS with Adanced Custom Fields plugin
+- Twig templating engine along with the Timber plugin for flexible, fast, and sustainable template development
+- Gulp task manager for preprocessing and optimizing assets
+- RequireJS for loading javascript files and modules
+- jQuery for simplified HTML document traversing, event handling, animating, and Ajax interactions
+- SCSS for writing more succinct CSS, and to keep files organized
+- Bootstrap - just the grid
+
 
 ## To-do
 
