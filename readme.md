@@ -11,9 +11,9 @@
 * PostHTML plugin to simplify the maintenance of BEM naming structure in html
 * ACF-JSON to save ACF field data under version control
 * Automated image optimisation
-* Helper functions to cleanup the wordpress head and dashboard adapted from [Plate](https://studio.bio/themes/plate) and elsewhere
-* Custom post type and taxonomy samples adapted from [Plate](https://studio.bio/themes/plate)
-* HTML schema & accessibility support adapted from [Plate](https://studio.bio/themes/plate)
+* Helper functions to cleanup the wordpress head and dashboard - adapted from [Plate](https://studio.bio/themes/plate) and elsewhere
+* Custom post type and taxonomy samples - adapted from [Plate](https://studio.bio/themes/plate)
+* HTML schema & accessibility support - adapted from [Plate](https://studio.bio/themes/plate)
   - accessibility-ready patterns from the WP theme guide 
   - ARIA values, 
   - screen reader text 
@@ -97,7 +97,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 * ️[Plate](https://studio.bio/themes/plate) by [studio.bio](https://studio.bio/)
   - Plate evolved out of [Bones](https://themble.com/bones/) starter theme by Eddie Machado. I use Plate because it is a blank platform that allows you to get your project up and running quickly. For more information please visit: 
 
-* The Timber Starter Theme by Upstatement
+* The [Timber Starter Theme](https://github.com/timber/starter-theme) by [https://www.upstatement.com](Upstatement)
   - The "_s" for Timber: a dead-simple theme that you can build from. With Timber, you write your HTML using the Twig Template Engine separate from your PHP files and can take advantage of object-oriented patterns that adhere to DRY and MVC principles.
 
 * [Fabrica Dev Kit](https://fabri.ca/wp-tools/) by [Fabrica](https://fabri.ca)
