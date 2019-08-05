@@ -68,7 +68,7 @@ I find this very useful for prototyping and even building entire sites. I was in
 
 "You can readily divide 23 into groups to make text columns, with some of the original columns acting as gutters (always 1 per gutter). Because I’ve chosen the number 23 very carefully, the math works out for divisions of 2 and 3, as well as several sub-divisions. So we can make text columns of 2, 4, 8, and also 3, 6, and 12."
 
-Bootstrap's grid provides a quick way to set this up. I've limited the use of Bootrap to just the grid (not the rest of the framework) but of there are still some drawbacks to this approach - mainly that it creates a lot of unnecessary CSS. It's used here as a starting point and it can be easily replaced with any other grid system. If you do choose to use it in production I recommend reading this article about [using mixins to manage both grid and styling behaviour in your SCSS rather than adding grid classes to your HTML](https://medium.com/@erik_flowers/how-youve-been-getting-the-bootstrap-grid-all-wrong-and-how-to-fix-it-6d97b920aa40)
+Bootstrap's grid provides a quick way to set this up. I've limited the use of Bootrap to just the grid (not the rest of the framework) but there are still some drawbacks to this approach, mainly that it creates a lot of unnecessary CSS. It's used here as a starting point and it can be easily replaced with any other grid system. If you do choose to use it in production I recommend reading this article about [using mixins to manage both grid and styling behaviour in your SCSS rather than adding grid classes to your HTML](https://medium.com/@erik_flowers/how-youve-been-getting-the-bootstrap-grid-all-wrong-and-how-to-fix-it-6d97b920aa40)
 
 
 ## To-do
